@@ -1,0 +1,298 @@
+/*
+ * CSS Style File
+ */
+
+/*
+ * Font
+ */
+@font-face {
+  font-family: Roobert-Regular;
+  src: url("../resources/font/Roobert-Regular.woff");
+}
+
+@font-face {
+  font-family: Roobert-Bold;
+  src: url("../resources/font/Roobert-Bold.woff");
+}
+
+/*
+ * Website Main Style
+ */
+body {
+  font-family: Roobert-Regular, serif;
+  text-decoration: none;
+  color: rgb(192, 190, 175);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #121212;
+  position: relative;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 28px;
+}
+
+h3 {
+  font-weight: normal;
+}
+
+p {
+  text-align: center;
+}
+
+.padding {
+  padding-bottom: 300px;
+}
+
+.topBar {
+  background-color: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Adjust height automatically based on content */
+  padding: 10px; /* Optional padding for spacing */
+}
+
+.topBar .content {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+.topBar img {
+  width: 50vw; /* Width of the logo is 50% of the viewport width */
+  max-width: 600px; /* Max width to ensure it doesn’t grow too large */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px; /* Space between logo and links */
+  transition: transform 0.3s ease-in-out;
+}
+
+.topBar img:hover {
+  transform: scale(1.03);
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .topBar img {
+    width: 70vw; /* Increase logo width relative to viewport on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .topBar img {
+    width: 80vw; /* Increase logo width relative to viewport on very small screens */
+  }
+}
+
+.topBar .links-container {
+  display: flex;
+  gap: 15px; /* Space between links */
+}
+
+/* Additional styling for links, if needed */
+.topBar .links-container a {
+  text-decoration: none;
+  color: rgb(192, 190, 175);
+  font-size: 16px; /* Adjust as needed */
+}
+
+.topBar .links-container a:hover {
+  color: white;
+}
+
+/*
+ * Page Background
+ */
+.pageArtContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-image: url("../img/placeholder-bg.png");
+  width: 100%;
+  height: 412px;
+  border-bottom: 1px white groove;
+}
+
+.mainTitle h1 {
+  font-size: 4vw; /* Default scaling */
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .mainTitle h1 {
+    font-size: 6vw; /* Larger text for smaller screens */
+  }
+}
+
+@media (min-width: 1200px) {
+  .mainTitle h1 {
+    font-size: 5vw; /* Adjust for larger screens */
+  }
+}
+
+.disclaimer {
+  align-content: center;
+  align-items: center;
+  background-color: #191919;
+  background-position: center;
+  border-radius: 40px;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0 10px 20px, rgba(0, 0, 0, 0.23) 0 6px 6px;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for rotation */
+}
+
+.disclaimer h1 {
+  text-align: center;
+}
+
+.disclaimer:hover {
+  transform: scale(1.02);
+}
+
+.roundedBG {
+  align-content: center;
+  align-items: center;
+  background-color: #191919;
+  background-position: center;
+  padding-left: 22px;
+  padding-right: 22px;
+  border-radius: 40px;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 20px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.19) 0 10px 20px, rgba(0, 0, 0, 0.23) 0 6px 6px;
+}
+
+.roundedBG img {
+  max-width: 100%; /* Ensure the image does not exceed container width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Center alignment */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.video-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 50%;
+  background: #000;
+  margin: 0 auto; /* Center the video container */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.roundedBG h1 {
+  font-size: 34px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.roundedBG h2 {
+  text-align: center;
+  text-decoration: none;
+}
+
+.roundedBG h3 {
+  font-size: 22px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.roundedBG ul {
+  list-style-type: disc;
+  font-size: 22px;
+  padding-top: 6px;
+  padding-left: 56px;
+  transition: transform 0.125s ease-in-out;
+}
+
+.roundedBG a {
+  text-decoration: none;
+  color: dodgerblue;
+}
+
+.roundedBG a:hover {
+  color: #e99aff;
+}
+
+/* Basic hover effect for all li elements */
+li {
+  transition: transform 0.125s ease-in-out;
+}
+
+li:hover {
+  transform: scale(1.02); /* Slightly scale up the list item */
+}
+
+.roundedBG p a {
+  text-decoration: none;
+  color: dodgerblue;
+  transition: transform 0.125s ease-in-out;
+}
+
+.roundedBG p a:hover {
+  transform: scale(1.02);
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.gridObject {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 12px 24px;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for rotation */
+}
+
+.gridObject a {
+  text-decoration: none;
+}
+
+.gridObject img {
+  border-radius: 20px 20px 0 0;
+  width: 100%; /* Ensure image takes full width of container */
+}
+
+.gridObject .textContainer {
+  background-color: #191919; /* Semi-transparent black background */
+  padding: 16px; /* Adjust padding as needed */
+  border-radius: 0 0 20px 20px; /* Rounded corners on bottom only */
+  width: 100%; /* Ensure text container takes full width of image minus the horizontal margins */
+  text-align: center; /* Center align the text */
+  box-sizing: border-box; /* Include padding in width calculation */
+  box-shadow: rgba(0, 0, 0, 0.19) 0 10px 20px, rgba(0, 0, 0, 0.23) 0 6px 6px;
+
+}
+
+.gridObject h2, .gridObject p {
+  color: rgb(192, 190, 175); /* Text color */
+  margin: 16px 0; /* Space between elements */
+  text-align: center; /* Center align the text */
+}
+
+.gridObject:hover {
+  transform: rotate(3deg) scale(1.03);
+}
+
